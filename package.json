@@ -1,0 +1,25 @@
+{
+  "name": "pcmjs",
+  "version": "0.0.2",
+  "description": "Wraps raw PCM byte array into playable wav container for both the browser and node.",
+  "main": "pcm.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pdeschen/pcm.js.git"
+  },
+  "keywords": [
+    "pcm",
+    "wav",
+    "audio"
+  ],
+  "dependencies": {
+    "mocha": ">= 1.9",
+    "chai": ">= 1.8"
+  },
+  "author": "Pascal Deschenes",
+  "license": "MIT",
+  "readmeFilename": "readme.md"
+}

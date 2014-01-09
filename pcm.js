@@ -1,5 +1,12 @@
 /*jslint bitwise: true*/
-/*global btoa, Audio*/
+/*global module, btoa, Audio, Buffer*/
+
+// node btoa
+if (typeof module !== "undefined" && module.exports) {
+  var btoa = function(str) {
+     return  (new Buffer(str || "", "ascii")).toString("base64");
+  }; 
+}
 
 if (!btoa) {
   // btoa shim
@@ -46,8 +53,8 @@ if (!btoa) {
 var pcm = function(options) {
 
   var defaults = {channels: 1, rate: 8000, depth: 8 }, _ = {}, header;
-  _.wav = [];         // Array containing the generated wave file
-  _.dataURI = '';     // http://en.wikipedia.org/wiki/Data_URI_scheme
+  _.wav = [];
+  _.dataURI = '';
   
   _.init = function() {
     options = _.mixin(options, defaults);
@@ -161,4 +168,7 @@ var pcm = function(options) {
   };
 };
 
-
+// AMD exports
+if (typeof module !== "undefined"  && module.exports) {
+  module.exports = pcm;
+}
