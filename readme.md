@@ -1,5 +1,5 @@
 
-## Overview
+## pcm.js [![Build Status](https://travis-ci.org/pdeschen/pcm.js.png?branch=master)](https://travis-ci.org/pdeschen/pcm.js) 
 
 Wraps raw PCM byte array into playable wav container for both the browser and node.js
 
